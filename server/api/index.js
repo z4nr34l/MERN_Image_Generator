@@ -24,21 +24,6 @@ app.get('/', async (req, res) => {
 //     res.send('Hello from DALL-E - another');
 // })
 
-const startServer = async () => {
+app.listen(3000, () => console.log('Server ready on port 3000.'));
 
-    try {
-        connectDB(process.env.MONGODB_URL);
-        app.listen(8080, () => console.log('Server started on ' +
-            'port http://localhost:8080'));
-    }
-
-    catch (error) {
-        console.log(error)
-    }
-
-
-
-}
-
-startServer();
-
+export default app;
